@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dice Game!</title>
+    <meta
+      name="description"
+      content="Get as close to 21 as possible without going over."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" /> -->
+
+    <!-- <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" /> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <meta name="theme-color" content="#fafafa" /> -->
+  </head>
+  <body>
+    <div id="title">
+      <h1>Dice Game!</h1>
+      <p>First one to 100 points wins!</p>
+    </div>
+    <div id="choosePlayers">
+      <div class="playerCount" id="twoPlayers">2 Players</div>
+      <div class="playerCount" id="threePlayers">3 Players</div>
+      <div class="playerCount" id="fourPlayers">4 Players</div>
+    </div>
+    <div class="hidden" id="instructions">
+      <button class="closeWindow">X</button>
+      <h2>Dice Game</h2>
+      <p>Each player takes a turn rolling a dice. The player can roll the dice as many times as they want and each roll is added to their score. If the dice lands on 1 however, the player immediately ends their turn and loses all of the points scored during the current turn.</p>
+      <p>The player can keep their points by hitting hold. The hold button keeps the points earned during the current turn and ends the player's turn.</p>
+      <p>The winner is the first player to earn 100 points!</p>
+    </div>
+    <div class="hidden" id="turnIndicator">Player 1's turn.</div>
+    <div class="hidden" id="gameWindow">
+      <div id="gameSetup">
+        <button id="changePlayers">Change Players</button>
+        <button id="instructionButton">Instructions</button>
+        <button id="newGame">New Game</button>
+      </div>
+      <div id="controls">
+        <button id="roll">Roll</button>
+        <img class="hidden" id="dice" src=""></img>
+        <button id="hold">Hold</button>
+      </div>
+    </div>
+    <div class="hidden" id="overlay"></div>
+    <div class="hidden" id="victory">
+      <button class="closeWindow" id="closeVictory">X</button>
+      <h2>Victory</h2>
+      <p id="victorySpeech"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

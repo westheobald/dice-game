@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    to top left,
+    rgb(10, 105, 143),
+    rgb(18, 163, 132)
+  );
+  font-family: "Nunito", sans-serif;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+  z-index: 2;
+  transition: background-color 0.5s;
+}
+
+button {
+  height: 40px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: rgb(201, 201, 201);
+}
+
+button:focus {
+  outline: none;
+}
+
+.closeWindow {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: white;
+  box-shadow: none;
+  border: 1px solid rgb(212, 212, 212);
+  text-align: center;
+  font-size: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+#instructions {
+  position: absolute;
+  max-height: 30%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  overflow-y: auto;
+  text-align: justify;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 10;
+}
+
+#instructions h2 {
+  text-align: center;
+}
+
+#choosePlayers {
+  width: 70%;
+  padding: 80px;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#dice {
+  height: 50px;
+}
+
+.playerCount {
+  background-color: rgb(226, 226, 226);
+  transition: background-color 0.5s;
+  height: 160px;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerCount:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.playerBar {
+  background-color: white;
+  height: 100px;
+  width: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#gameWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 50%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.playerBar {
+  height: 100%;
+  border-radius: 10px;
+}
+
+#controls {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  bottom: -100px;
+  transform: translate(-50%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#gameSetup {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#gameSetup button {
+  width: 150px;
+}
+
+.scores {
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#player1Score,
+#player2Score,
+#player3Score,
+#player4Score {
+  width: 50px;
+  height: 0%;
+  position: absolute;
+  bottom: 0;
+
+  transition: height 1s;
+  color: white;
+}
+
+#player1Score {
+  background-color: #4caf50;
+}
+
+#player2Score {
+  background-color: #2196f3;
+}
+
+#player3Score {
+  background-color: #f44336;
+}
+
+#player4Score {
+  background-color: #854891;
+}
+
+#turnIndicator {
+  font-size: 120%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  height: 80px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#roll {
+  width: 70px;
+}
+
+#hold {
+  width: 70px;
+}
+
+#victory {
+  position: absolute;
+  max-height: 30%;
+  width: 30%;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  overflow-y: auto;
+  text-align: justify;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 10;
+  text-align: center;
+}
+
+#title {
+  font-size: 120%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+#title h1 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
